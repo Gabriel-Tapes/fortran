@@ -1,4 +1,3 @@
-program maclaurin
 implicit none
 
 integer :: M=1, n, sinal=1
