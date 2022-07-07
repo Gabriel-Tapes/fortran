@@ -1,0 +1,15 @@
+#!/bin/bash
+nome_do_arquivo=$1
+
+if [ -a ./$nome_do_arquivo.f95 ]
+   then
+      if [ -a ./exe/$nome_do_arquivo ]
+         then
+            ./exe/$nome_do_arquivo
+         else
+            echo $(f95 $nome_do_arquivo.f95 -o exe/$nome_do_arquivo)
+            ./exe/$nome_do_arquivo
+      fi
+   else
+      echo "Nome de arquivo invalido!"
+fi
