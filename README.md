@@ -6,7 +6,8 @@
 
 **Ambiente de desenvolvimento**: Ubuntu 22.04 LTS   
 
-**Comando para compilar**\*: f95 \<nome-do-arquivo>.f95 -o exe/\<nome-do-arquivo-executavel>   
+**Comando para compilar**\*: f95 \<nome-do-arquivo>.f95 -o exe/\<nome-do-arquivo-executavel> ou
+./runf \<nome-do-arquivo>
 
 **Comando para executar**: exe/\<nome-do-arquivo-executavel>  
 
