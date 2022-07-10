@@ -1,15 +1,22 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# autor: Gabriel-Tapes
+# descrição: script para compilar e rodar programas em Fortran 95
+# version: 1.1
+
 nome_do_arquivo=$1
 
 if [ -a ./$nome_do_arquivo.f95 ]
+then
+   msg=$(f95 $nome_do_arquivo.f95 -o exe/$nome_do_arquivo)
+   
+   if [ -z  $msg ]
    then
-      if [ -a ./exe/$nome_do_arquivo ]
-         then
-            ./exe/$nome_do_arquivo
-         else
-            echo $(f95 $nome_do_arquivo.f95 -o exe/$nome_do_arquivo)
-            ./exe/$nome_do_arquivo
-      fi
+      ./exe/$nome_do_arquivo
    else
-      echo "Nome de arquivo invalido!"
+      echo $msg
+   fi
+
+else
+   echo "Nome de arquivo invalido!"
 fi
