@@ -8,7 +8,7 @@ nome_do_arquivo=$1
 
 if [ -a ./$nome_do_arquivo.f95 ]
 then
-   msg=$(f95 $nome_do_arquivo.f95 -o exe/$nome_do_arquivo)
+   msg=$(f95 -g -fbacktrace -Wall -fcheck=all $nome_do_arquivo.f95 -o exe/$nome_do_arquivo)
    
    if [ -z  $msg ]
    then
