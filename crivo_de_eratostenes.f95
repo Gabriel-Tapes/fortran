@@ -5,7 +5,7 @@ integer(kind = 4) :: i, k=0, lim
 logical, dimension(:), allocatable :: a
 real :: n, j
 
-   print *, 'Digite o valor de n: '; read *, n
+   8 print *, 'Digite o valor de n: '; read *, n
 
    if (n < 2) then
       print *, 'Digite um valor maior ou igual a 2!'
