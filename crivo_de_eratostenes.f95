@@ -1,9 +1,9 @@
 program crivo_de_eratostenes
 implicit none
 
-integer :: i, j, k, lim
+integer(kind = 4) :: i, k=0, lim
 logical, dimension(:), allocatable :: a
-real :: n
+real :: n, j
 
    print *, 'Digite o valor de n: '; read *, n
 
@@ -17,9 +17,10 @@ real :: n
          do k=0, int(n)
             j = i*(i+k)
             if (j > n) then
-               j = int(n)
+               a(int(n)) = .FALSE.
+               exit
             end if
-            a(j) = .FALSE.
+            a(int(j)) = .FALSE.
          end do
       end if
    end do
