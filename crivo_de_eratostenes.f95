@@ -7,6 +7,11 @@ real :: n, j
 
    print *, 'Digite o valor de n: '; read *, n
 
+   if (n < 2) then
+      print *, 'Digite um valor maior ou igual a 2!'
+      go to 8
+   end if
+
    allocate(a(2:int(n)))
    lim = int(sqrt(n))
 
