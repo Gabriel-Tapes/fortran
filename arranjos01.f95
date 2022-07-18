@@ -3,7 +3,7 @@ implicit none
 
 real, dimension(4) :: X = (/1.0, 3.0, 4.0, 10.0/)
 
-   X = X * 5
+   X = X * (-5)
 
    print '(4F8.2)', X
 
